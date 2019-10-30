@@ -1,0 +1,260 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+           ul {
+               list-style-type: none;
+               margin: 0;
+               padding: 0;
+               overflow: hidden;
+               background-color: azure;
+               font-family: 'Josefin Sans', sans-serif;
+            }
+            
+            li {
+                float: right;
+            }
+            
+            li a {
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: grey;
+            }
+            
+            .utama{
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0,0,0,.8);
+            }
+            
+            .logiKiri{
+                float: left;
+                height: 100%;
+                width: 50%;
+            }
+            .logo{
+                position: absolute;
+                width: 30%;
+                top: 20%;
+                left: 20%;
+                animation: slide-in-elliptic-left-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+            @keyframes slide-in-elliptic-left-fwd {
+                0% {
+                    transform: translateX(-800px) rotateY(30deg) scale(0);
+                    transform-origin: -100% 50%;
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0) rotateY(0) scale(1);
+                    transform-origin: 1800px 50%;
+                    opacity: 1;
+                }
+            }
+            .bola{
+                position: absolute;
+                height: 200px;
+                left: 43%;
+                top: 38%;
+                animation: bounce-top 0.9s infinite alternate both;
+            }
+            
+            @keyframes bounce-top {
+                0% {
+                    transform: translateY(-45px);
+                    animation-timing-function: ease-in;
+                    opacity: 1;
+                }
+                24% {
+                    opacity: 1;
+                }
+                40% {
+                    transform: translateY(-24px);
+                    animation-timing-function: ease-in;
+                }
+                65% {
+                    transform: translateY(-12px);
+                    animation-timing-function: ease-in;
+                }
+                82% {
+                    transform: translateY(-6px);
+                    animation-timing-function: ease-in;
+                }
+                93% {
+                    transform: translateY(-4px);
+                    animation-timing-function: ease-in;
+                }
+                25%,
+                55%,
+                75%,
+                87% {
+                    transform: translateY(0px);
+                    animation-timing-function: ease-out;
+                }
+                100% {
+                    transform: translateY(0px);
+                    animation-timing-function: ease-out;
+                    opacity: 1;
+                }
+            }
+            .logoKiri h1{
+                color: azure;
+                font-family: 'Staatliches', cursive;
+                position: absolute;
+                top: 40%;
+                left: 20%;
+                animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+            .logoKiri p{
+                color: azure;
+                font-family: 'Roboto', sans-serif;
+                position: absolute;
+                top: 45%;
+                left: 20%;
+                animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+            @keyframes focus-in-expand {
+                0% {
+                    letter-spacing: -0.5em;
+                    filter: blur(12px);
+                    opacity: 0;
+                }
+                100% {
+                    filter: blur(0px);
+                    opacity: 1;
+                }
+            }
+            
+            .gambarKanan{
+                float: right;
+                height: 100%;
+                width: 50%;
+            }
+            .cr{
+                position: absolute;
+                z-index: 3;
+                margin-left: 25%;
+                margin-top: 30%;
+                height: 600px;
+                animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 2s both;
+            }
+            .pogba2{
+                margin-top: 10%;
+                margin-left: 25%;
+                height: 600px;
+                position: absolute;
+                z-index: 1;
+                animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+            }
+            .messi{
+                margin-top: 30%;
+                margin-left: 33%;
+                height: 600px;
+                position: absolute;
+                z-index: 2;
+                animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s both;
+            }
+            @keyframes slide-in-blurred-bottom {
+                0% {
+                    transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+                    transform-origin: 50% 100%;
+                    filter: blur(40px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0) scaleY(1) scaleX(1);
+                    transform-origin: 50% 50%;
+                    filter: blur(0);
+                    opacity: 1;
+                }
+            }
+            
+            .menu{
+                position: absolute;
+                margin-top: 10%;
+                z-index: 5;
+                height: 12%;
+                width: 100%;
+                background-color: azure;
+            }
+            .menu p{
+                color: black;
+                font-size: 33px;
+                font-family: 'Staatliches', cursive;
+            }
+            
+            .content{
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0,0,0,.8);
+            }
+            .content h1{
+                margin-left: 41%;
+                color: azure;
+                font-family: 'Staatliches', cursive;
+                font-size: 100px;
+                margin-top: 20%;
+                position: absolute;
+                animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+            .button {
+                font-family: 'Staatliches', cursive;
+                font-size: 40px;
+                margin-top: 30%;
+                color: #494949 !important;
+                text-transform: uppercase;
+                text-decoration: none;
+                background: #ffffff;
+                padding: 20px;
+                border: 4px solid #494949 !important;
+                display: inline-block;
+                transition: all 0.4s ease 0s;
+            }
+            .button:hover {
+                color: #ffffff !important;
+                background: #f6b93b;
+                border-color: #f6b93b !important;
+                transition: all 0.4s ease 0s;
+            }
+        </style>
+    </head>
+    <body background="bg.png">
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#play">Play</a></li>
+        </ul>
+        <div class="utama" id="home">
+            <div class="gambarKanan">
+                <img class="cr" src="CR.png">
+                <img class="pogba2" src="pogba1.png">
+                <img class="messi" src="messi.png">
+            </div>
+            <div class="logoKiri">
+                <img class="logo" src="fifa-20-logo.png">
+                <h1>BREAK NEW GROUND</h1>
+                <p>From the street to the stadium, Break New Ground in FIFA 20.</p>
+                <img class="bola" src="bola.png">
+            </div>
+        </div>
+        <div class="menu" id="info" align="center">
+            <p>JOIN TODAY FOR THE ULTIMATE FIFA 20 EXPERIENCE</p>
+        </div>
+        <div class="content" id="play">
+            <h1>Play Now</h1>
+            <div class="button_cont" align="center"><a class="button" href="https://www.ea.com/games/fifa/fifa-20">PLAY FIFA 20</a></div>
+        </div>
+        
+    </body>
+</html>
